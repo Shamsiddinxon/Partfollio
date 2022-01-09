@@ -1,0 +1,16 @@
+.nav {
+    position: relative;
+
+    &__linc {
+        color:#fff;
+        font-size: 17px;
+        font-weight: 500;
+        text-decoration: none;
+        margin-left: 30px;
+        transition: 0.5s;
+    }
+
+    &__linc:hover {
+        color: crimson;
+    }
+}

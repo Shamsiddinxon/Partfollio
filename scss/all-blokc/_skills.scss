@@ -1,0 +1,96 @@
+.button {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.skills {
+    background: #000016;
+
+    & .content {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        margin-top: 20px;
+    }
+
+    & .col-left {
+        position: relative;
+        width: 45%;
+    }
+
+    & .col-left .content-title {
+        margin-bottom: 20px;
+    }
+
+    & .col-right {
+        position: relative;
+        width: 45%;
+    }
+
+    & .col-right .bar {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    & .col-right .bar .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    & span {
+        font-style: 18px;
+        font-weight: 500;
+    }
+
+    & .line {
+        position: relative;
+        width: 100%;
+        height: 15px;
+        background:#ccc;
+        border-radius:2px;
+    }
+
+    & .line::before {
+        content:'';
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: radius 2px;
+    }
+
+    & .html::before {
+        width: 95%;
+        background: #E45126;
+    }
+
+    & .css::before {
+        width: 90%;
+        background: #0c7388;
+    }
+
+    & .scss::before {
+        width: 85%;
+        background: #e3a324;
+    }
+
+    & .butstrap::before {
+        width: 70%;
+        background: #30dd60;
+    }
+
+    & .java::before {
+        width: 15%;
+        background: #6d7e88;
+    }
+
+    & .react::before {
+        width: 10%;
+        background: crimson;
+    }
+}
