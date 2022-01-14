@@ -1,20 +1,59 @@
 .header {
-    position: fixed;
-    background: rgba(255, 255, 255, .1);
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 999;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: 0.5s ease;
 }
 
-header .brand {
-    color: #fff;
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
+
+.header .brand {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header.sticky {
+  background-color: crimson;
+  padding: 10px 100px;
+}
+
+@media only screen and (max-width: 1049px) {
+  header {
+    padding: 12px 20px;
+
+    & .nav {
+      display: none;
+    }
+  }
+
+  .menu {
+    &__btn {
+      position: absolute;
+      background-image: url(../images/menu.png);
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      right: 0;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: 0.5s ease;
+    }
+  }
+
+  section {
+    padding: 80px 20px;
+  }
+
+
 }

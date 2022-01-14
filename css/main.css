@@ -479,14 +479,47 @@ img {
       -ms-flex-align: center;
           align-items: center;
   z-index: 999;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-header .brand {
+.header .brand {
   color: #fff;
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+header.sticky {
+  background-color: crimson;
+  padding: 10px 100px;
+}
+
+@media only screen and (max-width: 1049px) {
+  header {
+    padding: 12px 20px;
+  }
+  header .nav {
+    display: none;
+  }
+  .menu__btn {
+    position: absolute;
+    background-image: url(../images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    margin: 0 20px;
+    cursor: pointer;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  section {
+    padding: 80px 20px;
+  }
 }
 
 section {
@@ -609,6 +642,18 @@ section {
   margin-right: 30px;
 }
 
+@media only screen and (max-width: 1049px) {
+  .main .content h2 {
+    font-size: 25px;
+  }
+  .main .content h3 {
+    font-size: 35px;
+  }
+  .main .section-title {
+    font-size: 36px;
+  }
+}
+
 .nav {
   position: relative;
 }
@@ -657,7 +702,7 @@ section {
 }
 
 .about__title::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 56px;
   left: 50%;
@@ -669,7 +714,7 @@ section {
 }
 
 .about__title::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50px;
   left: 50%;
@@ -728,6 +773,23 @@ section {
 
 .about .conent-desc {
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1049px) {
+  .about .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .about .content .column {
+    position: relative;
+    width: 100%;
+  }
+  .about .content .col-righte {
+    margin-top: 40px;
+  }
 }
 
 .button {
@@ -835,6 +897,22 @@ section {
 .skills .react::before {
   width: 10%;
   background: crimson;
+}
+
+@media only screen and (max-width: 1049px) {
+  .skills .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skills .content .column {
+    position: relative;
+    width: 100%;
+  }
+  .skills .content .col-righte {
+    margin-top: 40px;
+  }
 }
 
 .servises {
@@ -961,5 +1039,178 @@ section {
 .work .content .card-img img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.contact {
+  padding: 100px 20px;
+}
+
+.contact .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact .content .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contact .content .row .card {
+  background: #fff;
+  width: 230px;
+  max-height: 200px;
+  padding: 20px;
+  margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.contact .card .contact-icon {
+  color: crimson;
+  font-size: 60px;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.contact .card:hover .contact-icon {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.contact .card .info h3 {
+  color: #111;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px;
+}
+
+.contact .card .info span {
+  color: #666;
+  font-weight: 500;
+}
+
+.contact .contact-form {
+  background: #fff;
+  max-width: 600px;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contact .contact-form h3 {
+  color: #111;
+  font-style: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact .contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact .contact-form .input-box input,
+.contact .contact-form .input-box textarea {
+  color: #111;
+  width: 100%;
+  padding: 10px;
+  font-style: 17px;
+  font-weight: 400;
+  outline: none;
+  border: 1px solid #111;
+  border-radius: 5px;
+  resize: none;
+}
+
+.contact .contact-form .input-box .send-btn {
+  color: #fff;
+  background: crimson;
+  display: inline-block;
+  font-size: 500;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #111;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.contact .contact-form .input-box .send-btn:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #111;
+}
+
+.contact .contact-form .input-box .send-btn:active {
+  background: crimson;
+  color: #fff;
+  border: 1px solid crimson;
+}
+
+@media only screen and (max-width: 1049px) {
+  .contact-form {
+    padding: 35px 40px;
+  }
+}
+
+.footer {
+  background: #000016;
+  color: #fff;
+  text-align: center;
+  padding: 34px;
+}
+
+.footer .footer-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer p {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=main.css.map */

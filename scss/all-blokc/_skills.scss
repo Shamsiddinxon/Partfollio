@@ -94,3 +94,20 @@
         background: crimson;
     }
 }
+
+@media only screen and (max-width:1049px) {
+    .skills{
+        & .content {
+            flex-direction: column;
+        }
+
+        & .content .column {
+            position: relative;
+            width: 100%;
+        }
+
+        & .content .col-righte {
+            margin-top: 40px;
+          }
+      }
+}

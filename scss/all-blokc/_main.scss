@@ -101,3 +101,19 @@ section {
     font-size: 25px;
     margin-right: 30px;
 }
+
+@media only screen and (max-width:1049px) {
+    .main {
+        & .content h2 {
+          font-size: 25px;
+        }
+
+        & .content h3 {
+          font-size: 35px;
+        }
+
+        .section-title {
+          font-size: 36px;
+        }
+    }
+}
