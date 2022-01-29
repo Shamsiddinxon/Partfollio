@@ -6,18 +6,17 @@ window.addEventListener('DOMContentLoaded', function() {
 
     const menuBtn = document.querySelector(".menu__btn");
     const navigation = document.querySelector(".nav")
-    const navItems = document.querySelector(".nav a")
+    const navItems = document.querySelectorAll(".nav a")
 
     menuBtn.addEventListener("click", () => {
         menuBtn.classList.toggle("active");
         navigation.classList.toggle("active");
     })
 
-    console.log(navItems);
-
-        navItems.addEventListener("click", () => {
+    navItems.forEach(navItem => {
+        navItem.addEventListener("click", () => {
             menuBtn.classList.remove("active");
-            navItems.classList.remove("active");
+            navigation.classList.remove("active");
         })
-
+    })
 })
