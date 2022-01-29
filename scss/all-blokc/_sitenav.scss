@@ -11,6 +11,63 @@
     }
 
     &__linc:hover {
-        color: crimson;
+        color: #FF0000;
     }
+
+}
+
+@media only screen and (max-width:1049px) {
+    .menu {
+        &__btn {
+          position: absolute;
+          background-image: url(../images/menu.png);
+          background-repeat: no-repeat;
+          background-size: 30px;
+          background-position: center;
+          width: 40px;
+          height: 40px;
+          right: 0;
+          margin: 0 20px;
+          cursor: pointer;
+          transition: 0.5s ease;
+        }
+
+        &__btn.active {
+          z-index: 9999;
+          background-image:url(../images/close.png);
+          background-repeat: no-repeat;
+          background-size: 25px;
+          background-position: center;
+          transition: .3s ease;
+          filter: invert(1);
+        }
+      }
+
+      .nav.active {
+          z-index: 888;
+          position: fixed;
+          background-color: #fff;
+          top: 0;
+          right: 0;
+          width: 380px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          transition: .4s ease;
+      }
+
+      .nav a {
+          color: #000;
+          margin: 10px;
+          padding: 0 20px;
+          border-radius: 20px;
+      }
+
+      .nav a:hover {
+          background: crimson;
+          color: #fff;
+      }
 }

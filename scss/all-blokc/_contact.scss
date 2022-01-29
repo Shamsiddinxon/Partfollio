@@ -100,20 +100,15 @@
     width: 100%;
     border: none;
     cursor: pointer;
-    border: 1px solid #111;
     transition: .5s ease;
   }
 
   .contact-form .input-box .send-btn:hover {
-    background:#fff;
-    color: #000;
-    border: 1px solid #111;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
   }
 
   .contact-form .input-box .send-btn:active  {
-    background:crimson;
-    color: #fff;
-    border: 1px solid crimson;
+    box-shadow:none;
   }
 }
 

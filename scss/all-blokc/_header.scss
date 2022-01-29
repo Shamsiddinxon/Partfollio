@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  padding: 0;
   padding: 15px 100px;
   display: flex;
   justify-content: space-between;
@@ -27,33 +28,20 @@ header.sticky {
 }
 
 @media only screen and (max-width: 1049px) {
-  header {
+  .header {
     padding: 12px 20px;
+
+    &.sticky {
+      padding: 10px 20px;
+    }
 
     & .nav {
       display: none;
     }
   }
 
-  .menu {
-    &__btn {
-      position: absolute;
-      background-image: url(../images/menu.png);
-      background-repeat: no-repeat;
-      background-size: 30px;
-      background-position: center;
-      width: 40px;
-      height: 40px;
-      right: 0;
-      margin: 0 20px;
-      cursor: pointer;
-      transition: 0.5s ease;
-    }
-  }
 
   section {
     padding: 80px 20px;
   }
-
-
 }
