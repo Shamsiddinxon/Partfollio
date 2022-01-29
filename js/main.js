@@ -19,4 +19,14 @@ window.addEventListener('DOMContentLoaded', function() {
             navigation.classList.remove("active");
         })
     })
+
+    const scrollBtn = document.querySelector(".scrolltopp-btn")
+    window.addEventListener("scroll", () => {
+        scrollBtn.classList.toggle("active", window.scrollY > 500)
+        console.log("hg g ");
+    })
+    scrollBtn.addEventListener("click", () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0
+    })
 })

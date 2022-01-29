@@ -27,6 +27,30 @@ header.sticky {
   padding: 10px 100px;
 }
 
+.scrolltopp-btn {
+  z-index: 999;
+  position: fixed;
+  background:crimson;
+  color:#fff;
+  width: 45px;
+  height: 45px;
+  right: 0;
+  bottom: 10px;
+  font-style: 22px;
+  text-align: center;
+  line-height: 45px;
+  border-radius:10px;
+  cursor:pointer;
+  opacity: 0;
+  transition: all.3s ease;
+}
+
+.scrolltopp-btn.active{
+  right: 20px;
+  // background-color:#fff;
+  opacity: 1;
+}
+
 @media only screen and (max-width: 1049px) {
   .header {
     padding: 12px 20px;
